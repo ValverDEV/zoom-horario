@@ -1,4 +1,4 @@
-diaNum = {
+export const diaNum = {
 	lunes: 0,
 	martes: 1,
 	miercoles: 2,
@@ -8,9 +8,9 @@ diaNum = {
 	domingo: 6
 }
 
-numDia = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo']
+export const numDia = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo']
 
-materias = [
+export const materias = [
 	{
 		nombre: 'Biofisica',
 		dias: {
@@ -110,7 +110,3 @@ materias = [
 		}
 	}
 ]
-
-exports.materias = materias
-exports.diaNum = diaNum
-exports.numDia = numDia
