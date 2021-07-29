@@ -1,3 +1,5 @@
+const horario = document.querySelector('#horario')
+
 const diaNum = {
 	lunes: 0,
 	martes: 1,
@@ -8,7 +10,7 @@ const diaNum = {
 	domingo: 6
 }
 
-var numDia = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo']
+var dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo']
 
 const materiasData = [
 	{
@@ -158,5 +160,36 @@ class Materia {
 
 }
 
+const rangoHorario = function (materias) {
+	let min = 1440
+	let max = 0
+	for (let materia of materias) {
+		if (materia.earliest < min) min = materia.earliest
+		if (materia.latest > max) max = materia.latest
+	}
+	return { earliest: min, latest: max }
+}
+
+const minsToTime = function (minutes) {
+	let h = Math.floor(minutes / 60);
+	let m = minutes % 60;
+	h = h < 10 ? '0' + h : h;
+	m = m < 10 ? '0' + m : m;
+	return h + ':' + m;
+}
+
 materias = []
 for (let materia of materiasData) materias.push(new Materia(materia))
+
+const rango = rangoHorario(materias)
+const numDivisiones = (rango.latest - rango.earliest) / 60
+let hora = rango.earliest
+
+for (let i = 0; i < numDivisiones; i++) {
+	let row = document.createElement('div')
+	row.classList.add('row', 'border')
+	row.style.height = '50px'
+	row.innerText = minsToTime(hora)
+	horario.appendChild(row)
+	hora += 60
+}
