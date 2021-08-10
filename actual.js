@@ -55,7 +55,7 @@ const clases = [
 		},
 		{
 			nombre: 'Biofisica',
-			inico: '12:00',
+			inicio: '12:00',
 			termina: '14:00',
 			url: biofisica
 		},
