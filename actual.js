@@ -142,7 +142,7 @@ const launchCurrent = function (nombre, url) {
 	h1.innerText = nombre
 	setTimeout(function () {
 		window.location.href = url
-	}, 3000)
+	}, 5000)
 }
 
 const claseActual = function (clasesDia, currentMins) {
