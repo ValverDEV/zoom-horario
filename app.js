@@ -178,6 +178,7 @@ const minsToTime = function (minutes) {
 	return h + ':' + m;
 }
 
+
 materias = []
 for (let materia of materiasData) materias.push(new Materia(materia))
 
@@ -188,8 +189,20 @@ let hora = rango.earliest
 for (let i = 0; i < numDivisiones; i++) {
 	let row = document.createElement('div')
 	row.classList.add('row', 'border')
-	row.style.height = '50px'
-	row.innerText = minsToTime(hora)
+	// row.innerText = minsToTime(hora)
+	let time = document.createElement('div')
+	time.classList.add('col')
+	time.innerText = minsToTime(hora)
+	row.appendChild(time)
+	let col = document.createElement('div')
+	col.classList.add('col', 'border')
+	for (let j = 0; j < 7; j++) {
+		actual = materiaActual(hora)
+		if ()// largo de actual
+			// col.innerHTML = materiaActual
+			row.appendChild(col.cloneNode(true))
+		console.log(j)
+	}
 	horario.appendChild(row)
 	hora += 60
 }
