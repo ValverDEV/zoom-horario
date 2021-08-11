@@ -3,7 +3,7 @@ const estadistica2 = 'https://cuaieed-unam.zoom.us/j/85252440658'
 const computacion = 'https://cuaieed-unam.zoom.us/j/84692670727'
 const fisica = 'https://cuaieed-unam.zoom.us/j/88904812467?pwd=amd0WC9Zdi94TGJRaDVPVXFwaUFrQT09'
 const fisicaLab = 'https://cuaieed-unam.zoom.us/j/83516684281'
-const micro = 'https://cuaieed-unam.zoom.us/j/88441220929'
+const micro = 'https://aulas-virtuales.cuaieed.unam.mx/alumnos.html'
 const estancia = 'https://us02web.zoom.us/j/87055264048?pwd=VjBsMG82TEpiY21PMU9UVlZGZlM5Zz09'
 const biofisica = 'https://us02web.zoom.us/j/88482667789?pwd=aG85WCtuZWMySXEyNW9qNW0rc29FUT09'
 
@@ -33,7 +33,7 @@ const clases = [
 			url: fisica
 		},
 		{
-			nombre: 'Microcontroladores',
+			nombre: 'Microcontroladores 🤡🤡🤡',
 			inicio: '16:00',
 			termina: '17:30',
 			url: micro
@@ -81,7 +81,7 @@ const clases = [
 			url: estadistica2
 		},
 		{
-			nombre: 'Microcontroladores',
+			nombre: 'Microcontroladores 🤡🤡🤡',
 			inicio: '12:00',
 			termina: '14:00',
 			url: micro
@@ -96,7 +96,7 @@ const clases = [
 			url: biofisica
 		},
 		{
-			nombre: 'Microcontroladores',
+			nombre: 'Microcontroladores 🤡🤡🤡',
 			inicio: '10:00',
 			termina: '12:00',
 			url: micro
@@ -123,7 +123,7 @@ const clases = [
 			url: fisicaLab
 		},
 		{
-			nombre: 'Microcontroladores',
+			nombre: 'Microcontroladores 🤡🤡🤡',
 			inicio: '10:00',
 			termina: '11:30',
 			url: micro
@@ -139,7 +139,7 @@ const hourToMins = function (hourString) {
 }
 
 const launchCurrent = function (nombre, url) {
-	h1.innerText = nombre
+	h1.innerHTML = nombre
 	setTimeout(function () {
 		window.location.href = url
 	}, 5000)
