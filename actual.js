@@ -158,6 +158,7 @@ const encontrar = function (res) {
 }
 
 const casoEspecial = function () {
+	h1.innerText = 'Espera...'
 	axios.get('https://aulas-virtuales.cuaieed.unam.mx:3000/api/zoom_live_meetings')
 		.then(encontrar)
 		.catch(function (error) { h1.innerText = 'Error al encontrar clase de Microcontroladores :(' })
