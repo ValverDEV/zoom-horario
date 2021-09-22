@@ -5,6 +5,7 @@ const fisica = 'https://cuaieed-unam.zoom.us/j/88904812467?pwd=amd0WC9Zdi94TGJRa
 // const fisicaLab = 'https://cuaieed-unam.zoom.us/j/83516684281'
 const fisicaLab = 'https://cuaieed-unam.zoom.us/j/88904812467?pwd=amd0WC9Zdi94TGJRaDVPVXFwaUFrQT09'
 const micro = 'DOMINGO RANGEL MIRANDA'
+// const micro = 'asdfasdfsdf'
 const estancia = 'https://us02web.zoom.us/j/87055264048?pwd=VjBsMG82TEpiY21PMU9UVlZGZlM5Zz09'
 const biofisica = 'https://us02web.zoom.us/j/88482667789?pwd=aG85WCtuZWMySXEyNW9qNW0rc29FUT09'
 
@@ -140,7 +141,8 @@ const hourToMins = function (hourString) {
 }
 
 const launchCurrent = function (nombre, url) {
-	h1.innerHTML = nombre
+	h1.innerText = nombre
+	console.log(nombre)
 	setTimeout(function () {
 		window.location.href = url
 	}, 5000)
@@ -154,15 +156,18 @@ const encontrar = function (res) {
 			let url = 'https://cuaieed-unam.zoom.us/j/'
 			url += obj.id
 			launchCurrent('Microcontroladores', url)
+			return true
 		}
 	}
+	h1.innerText = 'Aún no está la clase en Aulas, espera'
+	setTimeout(function () { casoEspecial() }, 5000)
+	return false
 }
 
 const casoEspecial = function () {
 	h1.innerText = 'Espera...'
 	axios.get('https://aulas-virtuales.cuaieed.unam.mx:3000/api/zoom_live_meetings')
 		.then(encontrar)
-		.catch(function (error) { h1.innerText = 'Error al encontrar clase de Microcontroladores :(' })
 }
 
 const claseActual = function (clasesDia, currentMins) {
