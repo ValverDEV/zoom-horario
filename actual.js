@@ -1,7 +1,8 @@
 const estadistica1 = 'https://cuaieed-unam.zoom.us/j/89305431257'
 const estadistica2 = 'https://cuaieed-unam.zoom.us/j/85252440658'
 const computacion = 'https://cuaieed-unam.zoom.us/j/84692670727'
-const fisica = 'https://cuaieed-unam.zoom.us/j/88904812467?pwd=amd0WC9Zdi94TGJRaDVPVXFwaUFrQT09'
+// const fisica = 'https://cuaieed-unam.zoom.us/j/88904812467?pwd=amd0WC9Zdi94TGJRaDVPVXFwaUFrQT09'
+const fisica = 'https://cuaieed-unam.zoom.us/j/83516684281'
 // const fisicaLab = 'https://cuaieed-unam.zoom.us/j/83516684281'
 const fisicaLab = 'https://cuaieed-unam.zoom.us/j/88904812467?pwd=amd0WC9Zdi94TGJRaDVPVXFwaUFrQT09'
 const micro = 'DOMINGO RANGEL MIRANDA'
@@ -31,7 +32,7 @@ const clases = [
 		{
 			nombre: 'Fisica Moderna',
 			inicio: '13:00',
-			termina: '15:00',
+			termina: '16:00',
 			url: fisica
 		},
 		{
