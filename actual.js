@@ -161,7 +161,7 @@ const encontrar = function (res) {
 		}
 	}
 	h1.innerText = 'Aún no está la clase en Aulas, espera'
-	setTimeout(function () { casoEspecial() }, 5000)
+	setTimeout(function () { casoEspecial() }, 30000)
 	return false
 }
 
